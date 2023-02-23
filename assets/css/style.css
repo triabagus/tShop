@@ -35,3 +35,129 @@ html{
 ::after{
     box-sizing: border-box;
 }
+
+body{
+    font-family: var(--primary-font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--dark-color);
+    background: var(--white-color);   
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+ul{
+    list-style: none;
+}
+
+p{
+    margin: 0 0 15px;
+}
+
+input,
+textarea,
+select{
+    font: inherit;
+    width: 100%;
+}
+
+input[type=checkbox],
+input[type=radio] {
+    width: auto;
+}
+
+input::placeholder,
+textarea::placeholder{
+    color: inherit;
+}
+
+button{
+    font: inherit;
+}
+
+strong{
+    font-weight: var(--fw600);
+}
+
+h1, h2, h3, h4{
+    font-family: var(--second-font);
+    font-weight: 400;
+    line-height: normal;
+}
+
+h1{
+    font-size: 2.75rem;
+}
+h2{
+    font-size: 2.5rem;
+}
+h3{
+    font-size: 2rem;
+}
+h4{
+    font-size: 1rem;
+}
+
+/* ------------- *
+    #Reused Style
+* -------------- */
+.container{
+    max-width: var(--mx-width, 1200px);
+    padding: 0 var(--gutter, 15px);
+    margin: 0 auto;    
+}
+
+/* ------------- *
+    #HEADER
+* -------------- */
+.inner-header{
+    line-height: 80px;
+}
+.inner-header :where(.wrap, .menu > ul),
+.list-inline > ul{
+    display: flex;
+    align-items: center;
+}
+
+.header-left, .header-right{
+    flex-grow: 1;
+}
+
+.header-center nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 180px;
+    max-width: 720px;
+}
+.header-center .branding{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+.header-center .branding a{
+    font-family: var(--second-font);
+    font-size: 30px;
+    line-height: inherit;
+    pointer-events: auto;
+}
+
+@media (min-width: 992px){
+    .menu-trigger{
+        display: none;
+    }
+}
