@@ -217,7 +217,7 @@
                         <div class="header__right">
                             <div class="list__inline">
                                 <ul>
-                                    <li><a href="#"><i class="ri-search-line"></i></a></li>
+                                    <li><a href="#" trigger-button data-target="search-float"><i class="ri-search-line"></i></a></li>
                                     <li>
                                         <a href="#">
                                             <span class="item__floating">0</span>
@@ -230,13 +230,22 @@
                     </div>
                 </div>
 
-                
+                <div id="search-float" class="search__float">
+                    <div class="container wide">
+                        <form action="" class="search">
+                            <i class="ri-search-line"></i>
+                            <input type="search" class="input" id="" placeholder="Search Products">
+                            <i class="ri-close-line" trigger-close></i>
+                        </form>
+                    </div>
+                </div>
             </div>
         </header>
         <main></main>
         <footer></footer>
     </div>
 
+    <div class="overlay" data-overlay></div>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

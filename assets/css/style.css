@@ -203,6 +203,77 @@ nav.menu .sub__menu li{
     text-decoration: line-through;
 }
 
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.overlay{
+    background: var(--dark-color);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 999;
+    transition: opacity .3s, visibility .3s;
+}
+.overlay.active{
+    opacity: .75;
+    visibility: visible;
+    pointer-events: all;
+}
+
+/* 
+    #HEADER: Search
+*/
+.inner__header .search__float{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    height: 80px;
+    background: var(--white-color);
+    z-index: 1000;
+    display: none;
+}
+form.search{
+    position: relative;
+}
+form.search :where(i) {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+form.search .input{
+    outline: 0;
+    padding: 15px 50px;
+}
+form.search i{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 100%;
+    cursor: pointer;
+}
+form.search :where(i:last-child){
+    left: auto;
+    right: 0;
+}
+.inner__header .search .input{
+    display: flex;
+    border: 0;
+    height: 80px;
+    fonr-size: 18px;
+} 
+
+.search__float.active{
+    display: block;
+}
+
 /* ------------- *
     #HEADER
 * -------------- */
