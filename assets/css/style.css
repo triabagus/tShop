@@ -203,7 +203,8 @@ nav.menu .sub__menu li{
     text-decoration: line-through;
 }
 
-.overlay{
+.overlay,
+.mobile__menu{
     position: fixed;
     top: 0;
     left: 0;
@@ -326,7 +327,8 @@ form.search :where(i:last-child){
 }
 
 .list__inline a,
-.menu__trigger {
+.menu__trigger,
+.close__trigger {
     position: relative;
     font-size: 24px;
     padding: 0 10px;
@@ -343,6 +345,75 @@ form.search :where(i:last-child){
     display: flex;
     align-items: center;
     height: 80px;
+}
+
+/* 
+    #HEADER: Mobile Menu
+*/
+.mobile__menu{
+    z-index: 1001;
+    pointer-events: none;
+}
+.mobile__menu .wrap{
+    position: relative;
+    max-width: calc(100% - 40px);
+    width: 360px;
+    height: 100%;
+    background: var(--white-color);
+    pointer-events: auto;
+}
+.mobile__menu .close__trigger,
+.mobile__menu .child__trigger{
+    position: absolute;
+    top: 0;
+    right: -40px;
+    width: 40px;
+    height: 40px;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mobile__menu .main__menu{
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+.mobile__menu nav > ul{
+    padding: 20px 0;
+}
+.mobile__menu nav > ul > li > a{
+    position: relative;
+    padding: 12px 0;
+    font-weight: 500;
+    transition: var(--transition-color);
+}
+.mobile__menu nav li :where(li, a) {
+    display: block;
+}
+.mobile__menu nav > ul > li > a:hover{
+    color: var(--grey-color);
+}
+.mobile__menu .child__trigger{
+    color: var(--dark-color);
+    font-size: 20px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    transition: var(--transition-background);
+    z-index: 1;
+}
+.mobile__menu .child__trigger:hover{
+    background: var(--light-color);
+}
+.mobile__menu nav .sub__menu{
+    padding-left: 15px;
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: .3s ease-in-out;
 }
 
 @media (min-width: 992px){
