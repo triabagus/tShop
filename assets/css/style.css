@@ -134,6 +134,33 @@ h4{
     border-radius: 50%;
 }
 
+.button > [class*=_btn]{
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0 30px;
+    display: inline-block;
+    line-height: 42px;
+    border-width: 2px;
+    border-style: solid;
+    transition: var(--transition-background),
+                var(--transition-color),
+                var(--transition-border);
+}
+.primary__btn, .secondary__btn{
+    border-color: var(--dark-color);
+}
+.primary__btn:hover,
+.secondary__btn{
+    background: var(--dark-color);
+    color: var(--white-color);
+}
+.secondary__btn:hover{
+    background: transparent;
+    border-color: var(--dark-color);
+    color: var(--dark-color);
+}
+
 /* ------------- *
     #Grouped Selector
 * -------------- */
@@ -353,6 +380,8 @@ form.search :where(i:last-child){
 .mobile__menu{
     z-index: 1001;
     pointer-events: none;
+    visibility: visible;
+    opacity: 0;
 }
 .mobile__menu .wrap{
     position: relative;
@@ -414,6 +443,19 @@ form.search :where(i:last-child){
     overflow: hidden;
     visibility: hidden;
     transition: .3s ease-in-out;
+}
+.mobile__menu nav li.active .sub__menu{
+    max-height: 100%;
+    visibility: visible;
+}
+.mobile__menu .button{
+    margin-top: auto;
+    padding: 20px 0 40px;
+    text-align: center;
+}
+.mobile__menu .button a{
+    display: block;
+    margin-top: 10px;
 }
 
 @media (min-width: 992px){
