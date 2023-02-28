@@ -252,6 +252,28 @@ nav.menu .sub__menu li{
     pointer-events: all;
 }
 
+.scrollto > .wrapper{
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+}
+.scrollto .wrapper::-webkit-scrollbar{
+    width: 12px;
+    height: 12px;
+}
+.scrollto .wrapper::-webkit-scrollbar-thumb{
+    border-color: var(--white-color);
+    background: var(--light-color);
+    border: 3px solid var(--border-color);
+    border-radius: 20px;
+}
+.scrollto .wrapper:hover::-webkit-scrollbar-thumb{
+    background: var(--grey-color);
+}
+.scrollto .wrapper::-webkit-scrollbar-thumb:hover{
+    background: var(--grey-color);
+}
+
 /* 
     #HEADER: Search
 */
@@ -363,6 +385,10 @@ form.search :where(i:last-child){
     display: flex;
     transition: var(--transition-color);
 }
+.list__inline a:hover,
+.menu__trigger:hover{
+    color: var(--light-color);   
+}
 
 .header__left .list__inline{
     display: none;
@@ -380,8 +406,12 @@ form.search :where(i:last-child){
 .mobile__menu{
     z-index: 1001;
     pointer-events: none;
-    visibility: visible;
+    visibility: hidden;
     opacity: 0;
+}
+.mobile__menu.active{
+    visibility: visible;
+    opacity: 1;
 }
 .mobile__menu .wrap{
     position: relative;
@@ -390,7 +420,12 @@ form.search :where(i:last-child){
     height: 100%;
     background: var(--white-color);
     pointer-events: auto;
+    /* transform: translateX(360px, -100%); */
+    transition: var(--transition-transform);
 }
+.mobile__menu.active .wrap{
+    transition: translateX(0);
+} 
 .mobile__menu .close__trigger,
 .mobile__menu .child__trigger{
     position: absolute;
@@ -398,7 +433,7 @@ form.search :where(i:last-child){
     right: -40px;
     width: 40px;
     height: 40px;
-    color: var(--primary-color);
+    color: var(--white-color);
     display: flex;
     align-items: center;
     justify-content: center;
