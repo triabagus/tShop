@@ -161,6 +161,10 @@ h4{
     color: var(--dark-color);
 }
 
+.title{
+    font-size: clamp(30px, -0.875em + 8.333vw, var(--fs-max, 40px));
+}
+
 /* ------------- *
     #Grouped Selector
 * -------------- */
@@ -493,6 +497,49 @@ form.search :where(i:last-child){
     margin-top: 10px;
 }
 
+/* 
+    #SLIDER
+*/
+.slider :where(.image, .ob__cover){
+    position: relative;
+}
+.slider .ob__cover{
+    height: 430px;
+}
+.ob__cover img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.slider .title__info{
+    background: var(--white-color);
+}
+.slider .title__info .wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 5vw;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+.slider .title__info .price{
+    position: relative;
+    font-size: 30px;
+    width: 80px;
+    height: 80px;
+    margin-top: -40px;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
 @media (min-width: 992px){
     .menu__trigger{
         display: none;
@@ -631,6 +678,29 @@ form.search :where(i:last-child){
     nav.menu .sub__menu li{
         padding: 5px 30px;
     }
+
+    /* Slider */
+    .slider .ob__cover{
+        height: calc(100vh - 80px);
+    }
+    .slider .title__info{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: transparent;
+    }
+    .slider h3{
+        --fs-max: 80px;
+        color: var(--white-color);
+    }
+    .slider .button a{
+        border-color: var(--white-color);
+        color: var(--white-color);
+    }
+    .slider .button a:hover{
+        border-color: var(--dark-color);
+    } 
 }
 
 @media (min-width: 1200px){

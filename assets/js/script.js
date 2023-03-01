@@ -30,3 +30,26 @@ submenu.forEach((menu) => menu.addEventListener('click', function(e){
         this.closest('.has__child').classList.toggle('active')
     }
 }))
+
+// Slider
+var swiper = new Swiper(".sliderbox", {
+  loop: true,
+  direction: "horizontal",
+  grabCursor: true,
+  
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  //   And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+});
