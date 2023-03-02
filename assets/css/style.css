@@ -540,6 +540,61 @@ form.search :where(i:last-child){
     border-radius: 50%;
 }
 
+.slider .custom__pagination{
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    bottom: 50%;
+}
+.slider .custom__pagination .swiper-pagination{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.custom__pagination .swiper-pagination-bullet{
+    position: relative;
+    width: 24px;
+    height: 24px;
+    opacity: 1;
+    background: transparent;
+}
+.custom__pagination .swiper-pagination-bullet::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 50%;
+    left: 50%;
+    background-color: var(--dark-color);
+    border: 1px solid var(--dark-color);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width .2s, height .2s, transform .2s;
+}
+.custom__pagination .swiper-pagination-bullet-active::before{
+    background: transparent;
+    width: 15px;
+    height: 15px;
+}
+.slider .title__info :where(span, h3, .button){
+    transform: translateY(30px);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform .75s, opacity .75s, visibility .75s;
+}
+.slider .swiper-slide-active .title__info :where(span, h3, .button){
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+.slider .swiper-slide-active .title__info h3{
+    transition-delay: .5s;
+}
+.slider .swiper-slide-active .title__info .button{
+    transition-delay: .75s;
+}
+
 @media (min-width: 992px){
     .menu__trigger{
         display: none;

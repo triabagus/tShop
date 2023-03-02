@@ -33,23 +33,15 @@ submenu.forEach((menu) => menu.addEventListener('click', function(e){
 
 // Slider
 var swiper = new Swiper(".sliderbox", {
-  loop: true,
   direction: "horizontal",
+  loop: true,
+  effect: "fade",
+  autoHeight: true,
   grabCursor: true,
   
   // If we need pagination
   pagination: {
     el: ".swiper-pagination",
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  //   And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
+    clickable: true,
+  }
 });
