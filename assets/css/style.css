@@ -610,7 +610,7 @@ form.search :where(i:last-child){
 .guide{
     background: var(--flashwhite-color);
 }
-main > div > .heading{
+main .heading{
     text-align: center;
     margin-bottom: 60px;
 }
