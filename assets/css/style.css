@@ -504,6 +504,132 @@ form.search :where(i:last-child){
 }
 
 /* 
+    #Header: Product
+*/
+.dotgrid .wrapper{
+    display: var(--display, grid);
+    --grid-col: 175px;
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--grid-col), 100%), 1fr));
+    gap: var(--gutter, 30px);
+}
+.dotgrid .dot__image{
+    position: relative;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.dotgrid .dot__image > a,
+.dotgrid .thumbnail.hover,
+.dotgrid .actions,
+.dotgrid .dot__image .label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.dotgrid .dot__image > a{
+    z-index: 1;
+}
+.dotgrid .thumbnail.hover{
+    opacity: 0;
+    transition: opacity .75s ease,
+                transform 1.1s cubic-bezier(.15, .75, .5 ,1) 0s;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+.dotgrid .dot__image:hover .thumbnail.hover{
+    opacity: 1;
+    transform: scale3d(1.1, 1.1, 1.1) translateZ(0);
+}
+
+.dotgrid .actions{
+    z-index: 2;
+    top: auto;
+    bottom: 20px;
+    transform: translate3d(0, 100%, 0);
+    opacity: 0;
+    transition: all .3s cubic-bezier(0, 0, .2, 1);
+}
+.dot__image:hover .actions{
+    opacity: 1;
+    transform: translateZ(0);
+}
+.dotgrid .actions ul,
+.dotgrid .dot__image .label{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.dotgrid .actions ul li a,
+.dotgrid .dot__image .label span{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    transition: var(--transition-background), var(--transition-color);
+}
+.dotgrid .actions ul li a:hover{
+    background-color: var(--dark-color);
+    color: var(--white-color);
+}
+.dotgrid .dot__image .label{
+    top: auto;
+    bottom: 20px;
+}
+.dotgrid .dot__image .label span{
+    font-size: 12px;
+    font-weight: 600;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+.dotgrid .dot__info{
+    text-align: center;
+}
+
+/* 
+    #Sub menu & Mega 
+*/
+.mega__content{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+}
+.mega__content .links{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+    gap: 15px;
+}
+
+nav.menu .sub__mega{
+    left: 0;
+    right: 0;
+    padding: 50px 0;
+}
+nav.menu :where(.sub__menu, .sub__mega){
+    position: absolute;
+    top: auto;
+    line-height: initial;
+    background: var(--white-color);
+    box-shadow: var(--shadow);
+    z-index: 100;
+    display: none;
+    animation: var(--fade);
+}
+nav.menu li:hover :where(.sub__menu, .sub__mega){
+    display: block;
+}
+nav.menu .sub__menu{
+    padding: 10px 0;
+}
+nav.menu .sub__menu li{
+    padding: 5px 30px;
+}
+
+/* 
     #SLIDER
 */
 .slider :where(.image, .ob__cover){
@@ -641,6 +767,42 @@ main .heading{
     border-color: #f0f9f8;
 }
 
+/* 
+    #Carousel
+*/
+.carousel .inner__wrapper{
+    position: relative;
+}
+.carousel .dotgrid .wrapper{
+    display: flex;
+    grid-template-columns: unset;
+    gap: unset;
+}
+.carousel .nav > div::after{
+    content: none;
+}
+.carousel .nav > div{
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--grey-color);
+    border-radius: 50%;
+    color: var(--dark-color);
+    font-size: 20px;
+    -webkit-tap-highlight-color: transparent;
+    transition: var(--transition-background),
+                var(--transition-color),
+                var(--transition-border);
+}
+.carousel .nav > div:hover{
+    cursor: pointer;
+    color: var(--white-color);
+    background: var(--dark-color);
+    border-color: var(--dark-color);
+}
+.carousel .nav .swiper-button-disabled {
+    opacity: 0;
+}
+
 
 @media (min-width: 992px){
     .menu__trigger{
@@ -653,132 +815,6 @@ main .heading{
 
     .header__left .list__inline{
         display: block;
-    }
-
-    /* 
-        #Header: Product
-    */
-    .dotgrid .wrapper{
-        display: var(--display, grid);
-        --grid-col: 175px;
-        grid-template-columns: repeat(auto-fit, minmax(min(var(--grid-col), 100%), 1fr));
-        gap: var(--gutter, 30px);
-    }
-    .dotgrid .dot__image{
-        position: relative;
-        margin-bottom: 15px;
-        overflow: hidden;
-    }
-    .dotgrid .dot__image > a,
-    .dotgrid .thumbnail.hover,
-    .dotgrid .actions,
-    .dotgrid .dot__image .label{
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-    }
-    .dotgrid .dot__image > a{
-        z-index: 1;
-    }
-    .dotgrid .thumbnail.hover{
-        opacity: 0;
-        transition: opacity .75s ease,
-                    transform 1.1s cubic-bezier(.15, .75, .5 ,1) 0s;
-        backface-visibility: hidden;
-        transform: translateZ(0);
-    }
-    .dotgrid .dot__image:hover .thumbnail.hover{
-        opacity: 1;
-        transform: scale3d(1.1, 1.1, 1.1) translateZ(0);
-    }
-
-    .dotgrid .actions{
-        z-index: 2;
-        top: auto;
-        bottom: 20px;
-        transform: translate3d(0, 100%, 0);
-        opacity: 0;
-        transition: all .3s cubic-bezier(0, 0, .2, 1);
-    }
-    .dot__image:hover .actions{
-        opacity: 1;
-        transform: translateZ(0);
-    }
-    .dotgrid .actions ul,
-    .dotgrid .dot__image .label{
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-    }
-    .dotgrid .actions ul li a,
-    .dotgrid .dot__image .label span{
-        font-size: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 42px;
-        height: 42px;
-        background-color: var(--white-color);
-        border-radius: 50%;
-        transition: var(--transition-background), var(--transition-color);
-    }
-    .dotgrid .actions ul li a:hover{
-        background-color: var(--dark-color);
-        color: var(--white-color);
-    }
-    .dotgrid .dot__image .label{
-        top: auto;
-        bottom: 20px;
-    }
-    .dotgrid .dot__image .label span{
-        font-size: 12px;
-        font-weight: 600;
-        background-color: var(--primary-color);
-        color: var(--white-color);
-    }
-    .dotgrid .dot__info{
-        text-align: center;
-    }
-
-    /* 
-        #Sub menu & Mega 
-    */
-    .mega__content{
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: 60px;
-    }
-    .mega__content .links{
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
-        gap: 15px;
-    }
-
-    nav.menu .sub__mega{
-        left: 0;
-        right: 0;
-        padding: 50px 0;
-    }
-    nav.menu :where(.sub__menu, .sub__mega){
-        position: absolute;
-        top: auto;
-        line-height: initial;
-        background: var(--white-color);
-        box-shadow: var(--shadow);
-        z-index: 100;
-        display: none;
-        animation: var(--fade);
-    }
-    nav.menu li:hover :where(.sub__menu, .sub__mega){
-        display: block;
-    }
-    nav.menu .sub__menu{
-        padding: 10px 0;
-    }
-    nav.menu .sub__menu li{
-        padding: 5px 30px;
     }
 
     /* Slider */
@@ -805,6 +841,12 @@ main .heading{
     } 
 }
 
+@media (min-width: 480px){
+    .carousel .dotgrid .item{
+        width: 270px;
+    }
+}
+
 @media (min-width: 1200px){
     .container.wide{
         --mx-width: 1720px;
@@ -815,5 +857,17 @@ main .heading{
 @media (min-width: 1400px){
     .mega__content{
         grid-template-columns: 1fr 1fr;
+    }
+
+    .carousel .inner__wrapper{
+        max-width: 1250px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+    .carousel .nav > .swiper-button-next{
+        right: -40px;
+    }
+    .carousel .nav > .swiper-button-prev{
+        left: -40px;
     }
 }
