@@ -759,7 +759,7 @@ main .heading{
     line-height: 1.4;
 }
 .guide .wrapper .item{
-    width: 290px;
+    /* width: 290px; */
     scroll-snap-align: center;
     flex-shrink: 0;
 }
@@ -803,6 +803,64 @@ main .heading{
     opacity: 0;
 }
 
+/* ------------- *
+    #ByCats
+* -------------- */
+
+.bycats .heading{
+    display: flex;
+    justify-content: center;
+}
+.bycats .heading > span{
+    font-family: var(--second-font);
+    font-size: 32px;
+    margin-right: 20px;
+}
+.bycats .heading > span,
+.opt__trigger{
+    height: 44px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    -webkit-tab-highlight-color: transparent;
+    cursor: pointer;
+}
+
+.sort__list .wrap{
+    position: relative;
+}
+.sort__list .wrap ul{
+    position: absolute;
+    text-align: left;
+    top: 50px;
+    left: 0;
+    right: 0;
+    background-color: var(--white-color);
+    box-shadow: var(--shadow);
+    z-index: 10;
+    display: none;
+    animation: var(--fade);
+}
+.sort__list .wrap ul.show{
+    display: block;
+}
+.sort__list ul li a{
+    display: block;
+    padding: 5px 20px;
+}
+.sort__list ul li a:hover,
+.sort__list ul li.active a{
+    background: var(--dark-color);
+    color: var(--white-color);
+}
+
+.sort__data {
+    display: none;
+    animation: var(--fade);
+}
+.sort__data.active{
+    display: block;
+}
 
 @media (min-width: 992px){
     .menu__trigger{
@@ -863,11 +921,5 @@ main .heading{
         max-width: 1250px;
         margin: 0 auto;
         padding: 0 40px;
-    }
-    .carousel .nav > .swiper-button-next{
-        right: -40px;
-    }
-    .carousel .nav > .swiper-button-prev{
-        left: -40px;
     }
 }
