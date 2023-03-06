@@ -97,24 +97,19 @@ if (sorter) {
       );
 
       this.classList.add("active");
-      sorter.querySelector("opt__trigger span.value").textContent =
+      sorter.querySelector(".opt__trigger span.value").textContent =
         this.textContent;
       sorter.querySelector("ul").classList.toggle("show");
     })
   );
 }
+
 // tabbed
-const trigger = document.querySelectorAll(".tabbed__trigger"),
-  content = document.querySelectorAll(".tabbed > div");
-
-trigger.forEach((btn) => {
-  btn.addEventListener("click", function () {
-    let dataTarget = this.dataset.id,
-      body = document.querySelector(`#${dataTarget}`);
-
-    trigger.forEach((b) => b.parentNode.classList.remove("active"));
-    trigger.forEach((s) => s.classList.remove("active"));
-    this.parentNode.classList.add("active");
-    body.classList.add("active");
+$(document).ready(function () {
+  $(".tabbed__trigger").click(function () {
+    $(".sort__data").removeClass("active");
+    $(".sort__data[data-id='" + $(this).attr("data-id") + "']").addClass(
+      "active"
+    );
   });
 });
