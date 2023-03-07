@@ -743,11 +743,11 @@ main .heading{
 .guide .dotgrid .wrapper{
     gap: 2rem
 }
-:is(.guide) .dot__image .thumbnail{
+:is(.guide, .fromblog) .dot__image .thumbnail{
     position: relative;
     opacity: unset;
 }
-.guide .dot__image .thumbnail img{
+:is(.guide, .fromblog).guide .dot__image .thumbnail img{
     width: 100%;
 }
 .guide .dot__title{
@@ -758,8 +758,11 @@ main .heading{
 .guide .dot__info p{
     line-height: 1.4;
 }
+.guide .wrapper{
+    display: flex;
+}
 .guide .wrapper .item{
-    /* width: 290px; */
+    width: 290px!important;
     scroll-snap-align: center;
     flex-shrink: 0;
 }
@@ -865,7 +868,6 @@ main .heading{
 /* ------------- *
     #Banner
 * -------------- */
-
 .banner{
     background-color: var(--light-color);
     background-image: url(/assets/img/banner.png);
@@ -889,8 +891,41 @@ main .heading{
 }
 
 /* ------------- *
+    #From Blog
+* -------------- */
+.fromblog .dot__title{
+    font-family: var(--second-font);
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 15px;
+}
+.fromblog .dot__info > a{
+    display: inline-block;
+    font-size: 12px;
+    text-transform: uppercase;
+    border: 1px solid var(--light-color);
+    color: var(--grey-color);
+    padding: 1px 10px;
+    transition: var(--transition-background),
+                var(--transition-color),
+                var(--transition-border);
+}
+.fromblog .dot__info > a:hover{
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    border-color: var(--dark-color);
+}
+
+/* ------------- *
     #Responsive
 * -------------- */
+
+
+@media (max-width: 480px){
+    .banner h3{
+        font-size: 32px;
+    }
+}
 
 @media (min-width: 480px){
     .carousel .dotgrid .item{
@@ -901,6 +936,11 @@ main .heading{
 @media (min-width: 768px){
     .banner{
         background-size: contain;
+    }
+    
+    /* Guide */
+    .guide .wrapper{
+        justify-content: initial;
     }
 }
 
@@ -939,6 +979,24 @@ main .heading{
     .slider .button a:hover{
         border-color: var(--dark-color);
     } 
+
+    /* Scroll div */
+    .scrollto .wrapper{
+        display: grid;   
+        padding: 0;
+        overflow: unset;
+        scroll-snap-type: unset;
+        overscroll-behavior-inline: unset;
+    }
+    .scrollto .wrapper .item{
+        width: unset;
+    }
+
+    /* Guide */
+    .guide .wrapper{
+        justify-content: center;
+        display: flex;
+    }
 }
 
 @media (min-width: 1200px){
