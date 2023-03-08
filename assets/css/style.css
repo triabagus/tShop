@@ -920,10 +920,20 @@ main .heading{
     #Responsive
 * -------------- */
 
-
 @media (max-width: 480px){
     .banner h3{
         font-size: 32px;
+    }
+
+    /* Blog scroll */
+    .fromblog .wrapper .item{
+        width: 290px!important;
+        scroll-snap-align: center;
+        flex-shrink: 0;
+    }
+    .fromblog .dotgrid .wrapper{
+        width: 100%;
+        display: flex;
     }
 }
 
