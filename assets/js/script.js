@@ -113,3 +113,27 @@ $(document).ready(function () {
     );
   });
 });
+
+// product image > page-single
+const thumbImage = new Swiper(".thumbnail__image", {
+  // loop: true,
+  direction: "vertical",
+  spaceBetween: 15,
+  slidesperView: 1,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+
+const mainImage = new Swiper(".main__image", {
+  loop: true,
+  autoHeight: true,
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  thumbs: {
+    swiper: thumbImage,
+  }
+})
