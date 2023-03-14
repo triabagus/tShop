@@ -1097,7 +1097,7 @@ main .heading{
 
 @media (min-width: 481px){
     .product .wrapper{
-        --gutter: 60px;
+        --gutter: 60px;  
     }
     .product.dotgrid .image{
         position: relative;
@@ -1141,6 +1141,12 @@ main .heading{
     .fromblog .dotgrid .wrapper{
         width: 100%;
         display: flex;
+    }
+
+    /* Single product */
+    .product .wrapper{
+        --gutter: 60px;    
+        --grid-col: 100%;
     }
 }
 
