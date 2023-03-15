@@ -1094,6 +1094,100 @@ main .heading{
     height: 50px;
 }
 
+    /* 
+        #Product Summary
+    */
+.summary .entry{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.summary .product__group{
+    display: flex;
+    justify-content: space-between;
+}
+.summary .product__price{
+    display: flex;
+    align-items: center;
+}
+.summary .product__price .current{
+    font-size: 30px;
+}
+.summary .product__price .wrap{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+}
+.summary .product__price .wrap::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 12px;
+    height: 100%;
+    width: 1px;
+    background: var(--grey-color);
+    transform: skewX(-25deg);
+}
+.summary .product__price .discount{
+    display: inline-block;
+    width: 44px;
+    font-size: 14px;
+    padding: 5px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    margin-left: -10px;
+    text-align: center;
+    border-radius: 5px;
+    line-height: 1;
+}
+.summary .product__rating{
+    line-height: initial;
+    text-align: right;
+}
+.summary .product__rating a{
+    font-size: 14px;
+    padding-left: 10px;
+    color: var(--grey-color);
+    text-decoration: dotted;
+    text-decoration-line: underline;
+    white-space: nowrap;
+    transition: var(--transition-color);
+}
+.summary .product__rating a:hover{
+    color: var(--dark-color);
+}
+
+.summary .wrap:has(button){
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.summary button{
+    border-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+.summary .wrap > button,
+.summary .qty button{
+    width: 40px;
+    height: 40px;
+} 
+.summary .product__color button{
+    border-radius: 50%;
+}
+.summary .product__color button.tosca{
+    background: #a9cdcc;
+}
+.summary .product__color button.brown{
+    background: #966548;
+}
+.summary .product__color button.ocean{
+    background: #81b8cc;
+}
 
 @media (min-width: 481px){
     .product .wrapper{
