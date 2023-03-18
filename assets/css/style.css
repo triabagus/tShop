@@ -1119,7 +1119,8 @@ main .heading{
     flex-direction: column;
     padding-left: 30px;
 }
-.summary .product__price .wrap::before{
+.summary .product__price .wrap::before,
+.product .head__review span::before{
     content: '';
     position: absolute;
     top: 0;
@@ -1381,8 +1382,66 @@ main .heading{
     list-style-type: disc;
 }
 .product.detail .dotgrid .wrapper{
-    --grid-col: 25px;
+    --grid-col: 250px;
     --gutter: 30px;
+}
+
+.product .product-about.custom h3{
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--light-color);
+}
+
+.product .review{
+    max-width: 770px;
+}
+.product .review .head__review{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--light-color);
+}
+.product .review .head__review strong{
+    font-size: 50px;
+}
+.product .review .head__review span{
+    position: relative;
+    padding-left: 20px;
+}
+.product .head__review span::before{
+    height: 50px;
+    top: -30px;
+}
+.product .head__review .primary__btn{
+    border-width: 1px;
+    text-transform: unset;
+    font-weight: 500;
+}
+
+.product .profile .thumb__name{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.product .profile .image{
+    height: 72px;
+    width: 72px;
+    border-radius: 50%;
+    margin-right: 20px;
+    overflow: hidden;
+}
+.product .profile .grouping{
+    line-height: initial;
+}
+.product .profile .name{
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.product .profile .date{
+    font-size: 12px;
+    margin-top: 8px;
 }
     
 @media (min-width: 481px){
@@ -1411,11 +1470,20 @@ main .heading{
     .custom__pagination{
         display: none;
     }
+    .product .profile .comment{
+        padding-left: 92px;
+    }
 }
 
 /* ------------- *
     #Responsive
 * -------------- */
+
+@media (max-width: 768px){
+    .product nav:before{
+        top: 78px;
+    }
+}
 
 @media (max-width: 480px){
     .banner h3{
@@ -1437,6 +1505,14 @@ main .heading{
     .product .wrapper{
         --gutter: 60px;    
         --grid-col: 100%;
+    }
+
+    /* Product description */
+    .product nav:before{
+        left: 20px;
+    }
+    .product.detail .dotgrid .wrapper{
+        flex-direction: column;
     }
 }
 
@@ -1521,6 +1597,11 @@ main .heading{
     /* Guide */
     .guide .wrapper{
         justify-content: center;
+        display: flex;
+    }
+
+    /* Product description */
+    .product.detail .scrollto .wrapper{
         display: flex;
     }
 }
