@@ -1007,7 +1007,8 @@ main .heading{
     font-size: 14px;
     border: 2px solid var(--dark-color);
 }
-.inner__footer .bottom{
+.inner__footer .bottom,
+.page__single .carousel{
     padding: 40px 0;
 }
 
@@ -1363,6 +1364,10 @@ main .heading{
     padding: 50px 0;
     max-width: 980px;
     margin: 0 auto;
+    display: none;
+}
+.product .product__about.active{
+    display: block
 }
 .product .product__about .text__block{
     padding-bottom: 30px;
@@ -1442,6 +1447,9 @@ main .heading{
 .product .profile .date{
     font-size: 12px;
     margin-top: 8px;
+}
+.review .profile{
+    padding-bottom: 40px;
 }
     
 @media (min-width: 481px){
