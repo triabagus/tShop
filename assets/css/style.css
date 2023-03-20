@@ -239,7 +239,8 @@ nav.menu .sub__menu li{
 }
 
 .overlay,
-.mobile__menu{
+.mobile__menu,
+.data__popup{
     position: fixed;
     top: 0;
     left: 0;
@@ -1450,6 +1451,70 @@ main .heading{
 }
 .review .profile{
     padding-bottom: 40px;
+}
+
+    /* 
+        #Popup Modal
+    */
+.data__popup{
+    z-index: 1001;
+    pointer-events: none;
+}
+.data__popup .wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.data__popup .data__content{
+    position: relative;
+    background: var(--white-color);
+    padding: 40px 20px;
+    width: var(--data-width, 400px);
+    max-width: calc(100vw - 50px);
+    max-height: calc(100vw - 60px);
+    border-radius: 5px;
+    overflow-y: auto;
+    pointer-events: auto;
+}
+.data__popup .close__trigger,
+.data__popup .form span{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+.data__popup .form{
+    position: relative;
+}
+.data__popup label{
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: block;
+}
+.data__popup .form input{
+    color: var(--dark-color);
+    background: var(--light-color);
+    border: 0;
+    padding: 7px 34px 7px 10px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+.data__popup .form span{
+    top: auto;
+    bottom: 0;
+    right: 10px;
+    cursor: pointer;
+    transition: var(--transition-color);
+}
+.data__popup .form span:hover{
+    color: var(--grey-color);
+}
+.data__popup .media__share{
+    margin-top: 20px;
 }
     
 @media (min-width: 481px){
