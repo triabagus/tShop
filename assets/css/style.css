@@ -1513,8 +1513,38 @@ main .heading{
 .data__popup .form span:hover{
     color: var(--grey-color);
 }
-.data__popup .media__share{
+.data__popup .media__share,
+.data__popup form > div{
     margin-top: 20px;
+}
+
+form .button button,
+.d__review .stars label{
+    cursor: pointer;
+}
+
+.d__review .data__content{
+    min-width: 500px;
+}
+.d__review .dotgrid .wrapper{
+    --gutter: 10px;
+}
+.d__review .stars input{
+    display: none;
+}
+.d__review .stars label{
+    font-size: 16px;
+    margin: 0;
+}
+.d__review .stars > input:checked ~ label{
+    color: #ffa502;
+}
+.d__review :where(.rating, .stars){
+    display: flex;
+    gap: 7px;
+}
+.d__review .stars{
+    flex-direction: row-reverse;
 }
     
 @media (min-width: 481px){

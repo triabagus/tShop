@@ -959,7 +959,7 @@
         </div>
     </div>
 
-    <div id="data-share" class="data__popup d__share">
+    <!-- <div id="data-share" class="data__popup d__share">
         <div class="wrap">
             <div class="data__content">
                 <a href="#0" class="close__trigger">
@@ -983,15 +983,61 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <!-- <div id="data-share" class="data__popup d__share">
+    <!-- <div id="data-question" class="data__popup d__question">
         <div class="wrap">
-            <a href="#0" class="close__trigger">
-                <i class="ri-close-line"></i>
-            </a>
+            <div class="data__content">
+                <a href="#0" class="close__trigger">
+                    <i class="ri-close-line"></i>
+                </a>
+                <h3>The question</h3>
+                <form action="">
+                    <div><input type="text" placeholder="Name"></div>
+                    <div><input type="text" placeholder="Email"></div>
+                    <div><textarea name="question" id="question" placeholder="Your question is..." cols="30" rows="5"></textarea></div>
+                    <div class="button"><button class="secondary__btn" type="submit">Submit</button></div>
+                </form>
+            </div>
         </div>
     </div> -->
+
+    <div id="data-review" class="data__popup d__review">
+        <div class="wrap">
+            <div class="data__content">
+                <a href="#0" class="close__trigger">
+                    <i class="ri-close-line"></i>
+                </a>
+                <h3>Write a Review</h3>
+                <form action="">
+                    <div class="dotgrid">
+                        <div class="wrapper">
+                            <div><input type="text" placeholder="Name"></div>
+                            <div><input type="text" placeholder="Email"></div>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <span>Your rating:</span>
+                        <div class="stars">
+                            <input type="radio" name="rating" id="star5">
+                            <label for="star5"><i class="ri-star-fill"></i></label>
+                            <input type="radio" name="rating" id="star4">
+                            <label for="star4"><i class="ri-star-fill"></i></label>
+                            <input type="radio" name="rating" id="star3">
+                            <label for="star3"><i class="ri-star-fill"></i></label>
+                            <input type="radio" name="rating" id="star2">
+                            <label for="star2"><i class="ri-star-fill"></i></label>
+                            <input type="radio" name="rating" id="star1">
+                            <label for="star1"><i class="ri-star-fill"></i></label>
+                        </div>
+                    </div>
+                    <div><input type="text" placeholder="Review Title"></div>
+                    <div><textarea name="question" id="question" placeholder="Your review is..." cols="30" rows="5"></textarea></div>
+                    <div class="button"><button class="secondary__btn" type="submit">Submit</button></div>
+                </form>
+            </div>
+        </div>
+    </div>
     
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
