@@ -885,11 +885,13 @@ main .heading{
     color: var(--white-color);
 }
 
-.sort__data {
+.sort__data,
+.data__popup{
     display: none;
     animation: var(--fade);
 }
-.sort__data.active{
+.sort__data.active,
+.data__popup.active{
     display: block;
 }
 

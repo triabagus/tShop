@@ -368,8 +368,8 @@
                                             <ul>
                                                 <li><a href="#0"><i class="ri-heart-line"></i> <span>Add to Wishlist</span></a></li>
                                                 <li><a href="#0"><i class="ri-arrow-right-line"></i> <span>Compare</span></a></li>
-                                                <li><a href="#0"><i class="ri-share-forward-line"></i> <span>Share</span></a></li>
-                                                <li><a href="#0"><i class="ri-question-line"></i> <span>Ask Question</span></a></li>
+                                                <li><a href="#0" trigger-button data-target="data-share"><i class="ri-share-forward-line"></i> <span>Share</span></a></li>
+                                                <li><a href="#0" trigger-button data-target="data-question"><i class="ri-question-line"></i> <span>Ask Question</span></a></li>
                                             </ul>
                                         </div>
 
@@ -467,7 +467,7 @@
                                             <span>3 reviews</span>
                                         </div>
                                         <div class="button">
-                                            <a href="#0" class="primary__btn">Write a review</a>
+                                            <a href="#0" class="primary__btn" trigger-button data-target="data-review">Write a review</a>
                                         </div>
                                     </div>
 
@@ -959,10 +959,10 @@
         </div>
     </div>
 
-    <!-- <div id="data-share" class="data__popup d__share">
+    <div id="data-share" class="data__popup d__share">
         <div class="wrap">
             <div class="data__content">
-                <a href="#0" class="close__trigger">
+                <a href="#0" class="close__trigger" trigger-close>
                     <i class="ri-close-line"></i>
                 </a>
                 <div class="form">
@@ -983,12 +983,12 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
-    <!-- <div id="data-question" class="data__popup d__question">
+    <div id="data-question" class="data__popup d__question">
         <div class="wrap">
             <div class="data__content">
-                <a href="#0" class="close__trigger">
+                <a href="#0" class="close__trigger" trigger-close>
                     <i class="ri-close-line"></i>
                 </a>
                 <h3>The question</h3>
@@ -1000,12 +1000,12 @@
                 </form>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <div id="data-review" class="data__popup d__review">
         <div class="wrap">
             <div class="data__content">
-                <a href="#0" class="close__trigger">
+                <a href="#0" class="close__trigger" trigger-close>
                     <i class="ri-close-line"></i>
                 </a>
                 <h3>Write a Review</h3>
