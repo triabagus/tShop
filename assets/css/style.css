@@ -240,7 +240,8 @@ nav.menu .sub__menu li{
 
 .overlay,
 .mobile__menu,
-.data__popup{
+.data__popup,
+.cart__menu{
     position: fixed;
     top: 0;
     left: 0;
@@ -438,19 +439,22 @@ form :where(input, textarea, select)::placeholder{
 }
 
 /* 
-    #HEADER: Mobile Menu
+    #HEADER: Mobile Menu, Cart Menu
 */
-.mobile__menu{
+.mobile__menu,
+.cart__menu{
     z-index: 1001;
     pointer-events: none;
     visibility: hidden;
     opacity: 0;
 }
-.mobile__menu.active{
+.mobile__menu.active,
+.cart__menu.active{
     visibility: visible;
     opacity: 1;
 }
-.mobile__menu .wrap{
+.mobile__menu .wrap,
+.cart__menu .wrap{
     position: relative;
     max-width: calc(100% - 40px);
     width: 360px;
@@ -460,11 +464,13 @@ form :where(input, textarea, select)::placeholder{
     /* transform: translateX(360px, -100%); */
     transition: var(--transition-transform);
 }
-.mobile__menu.active .wrap{
+.mobile__menu.active .wrap,
+.cart__menu.active .wrap{
     transition: translateX(0);
 } 
 .mobile__menu .close__trigger,
-.mobile__menu .child__trigger{
+.mobile__menu .child__trigger,
+.cart__menu .close__trigger{
     position: absolute;
     top: 0;
     right: -40px;
@@ -475,7 +481,8 @@ form :where(input, textarea, select)::placeholder{
     align-items: center;
     justify-content: center;
 }
-.mobile__menu .main__menu{
+.mobile__menu .main__menu,
+.cart__menu .cart__list{
     height: 100%;
     padding: 0 20px;
     display: flex;
@@ -1547,6 +1554,13 @@ form .button button,
 }
 .d__review .stars{
     flex-direction: row-reverse;
+}
+
+    /* 
+        #Floating Cart
+    */
+.cart__menu .wrap{
+    float: right;
 }
     
 @media (min-width: 481px){
