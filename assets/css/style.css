@@ -1561,6 +1561,94 @@ form .button button,
     */
 .cart__menu .wrap{
     float: right;
+    --transX: 100%;
+}
+.cart__menu .close__trigger{
+    right: auto;
+    left: -40px;
+}
+.cart__menu .wrapper{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.cart__menu .cart__header{
+    padding: 30px 0;
+}
+
+
+.product__list li{
+    margin-bottom: 30px;
+}
+.product__list .grouping{
+    position: relative;
+    float: left;
+    padding-left: 45px;
+}
+.product__list .quantity{
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 30px;
+}
+.product__list .quantity .control{
+    background: var(--flashwhite-color);
+    border-radius: 5px;
+}
+.product__list .quantity .control > * {
+    height: 30px;
+    border: 0;
+    outline: 0;
+    text-align: center;
+    background: transparent;
+}
+.product__list .quantity button{
+    font-size: 20px;
+    line-height: initial;
+    width: 100%;
+    cursor: pointer;
+}
+
+.product__list .thumbnail{
+    width: 70px;
+    margin-right: 20px;
+}
+.product__list .variants{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.product__list .variants h4{
+    line-height: initial;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.product__list .variants > div{
+    font-size: 14px;
+    line-height: 1.4;
+}
+.product__list .item__remove{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.product__list .item__remove{
+    color: var(--red-color);
+    background: #ff47571a;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: var(--transition-color), var(--transition-background);
+}
+.product__list .item__remove:hover{
+    color: var(--light-color);
+    background: var(--dark-color);
 }
     
 @media (min-width: 481px){
