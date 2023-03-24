@@ -223,7 +223,7 @@
                                 <ul>
                                     <li><a href="#" trigger-button data-target="search-float"><i class="ri-search-line"></i></a></li>
                                     <li>
-                                        <a href="#">
+                                        <a href="#" trigger-button data-target="data-cart">
                                             <span class="item__floating">3</span>
                                             <i class="ri-shopping-bag-line"></i>
                                         </a>
@@ -1039,18 +1039,18 @@
         </div>
     </div>
 
-    <div id="data-cart" class="cart__menu active">
+    <div id="data-cart" class="cart__menu">
         <div class="wrap">
-            <a href="#0" class="close__trigger"><i class="ri-close-line"></i></a>
+            <a href="#0" class="close__trigger" trigger-close><i class="ri-close-line"></i></a>
             <div class="scrollto cart__outer">
                 <div class="wrapper">
                     <div class="cart__list">
                         <div class="wrapper">
                             <div class="cart__header">
-                                <h2>Shopping cart</h2>
+                                <h3>Shopping cart</h3>
                             </div>
-                            <div class="cart__body scrollto">
-                                <div class="product__list">
+                            <div class="cart__body">
+                                <div class="product__list scrollto">
                                     <div class="wrapper">
                                         <ul>
                                             <li>
@@ -1078,7 +1078,7 @@
                                                         <span>Size:</span>
                                                         <span>L</span>
                                                     </div>
-                                                    <div class="price">145.00</div>
+                                                    <div class="price">$145.00</div>
                                                     <a href="#0" class="item__remove">
                                                         <i class="ri-close-line"></i>
                                                     </a>
@@ -1140,7 +1140,38 @@
                                                         <span>Size:</span>
                                                         <span>L</span>
                                                     </div>
-                                                    <div class="price">125.00</div>
+                                                    <div class="price">$125.00</div>
+                                                    <a href="#0" class="item__remove">
+                                                        <i class="ri-close-line"></i>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="grouping">
+                                                    <div class="quantity">
+                                                        <div class="control">
+                                                            <button>-</button>
+                                                            <input type="text" value="1">
+                                                            <button>+</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="thumbnail">
+                                                        <a href="#0">
+                                                            <img src="/assets/img/product_03.jpg" alt="product 03">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="variants">
+                                                    <h4 class="dot__title"><a href="#0">T-shirt Blue</a></h4>
+                                                    <div class="color grey__color">
+                                                        <span>Color:</span>
+                                                        <span>Blue</span>
+                                                    </div>
+                                                    <div class="color grey__color">
+                                                        <span>Size:</span>
+                                                        <span>L</span>
+                                                    </div>
+                                                    <div class="price">$125.00</div>
                                                     <a href="#0" class="item__remove">
                                                         <i class="ri-close-line"></i>
                                                     </a>
@@ -1151,7 +1182,51 @@
                                 </div>
                             </div>
                             <div class="cart__footer">
+                                <div class="discount">
+                                    <form action="">
+                                        <input type="text" name="coupon" id="coupon" class="input" placeholder="Coupon">
+                                        <input type="submit" value="Apply" class="submit">
+                                    </form>
+                                </div>
                                 
+                                <div class="math__pricing">
+                                    <ul>
+                                        <li>
+                                            <span>Subtotal</span>
+                                            <span class="value"></span>
+                                        </li>
+                                        <ul>
+                                            <li><span>Shipping</span></li>
+                                            <li>
+                                                <div>
+                                                    <input type="radio" name="shipping" id="shipping" class="checker">
+                                                    <label for="free">Free</label>
+                                                </div>
+                                                <span class="value">$0.00</span>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <input type="radio" name="shipping" id="shipping" class="checker">
+                                                    <label for="flat">Flat</label>
+                                                </div>
+                                                <span class="value">$147.00</span>
+                                            </li>
+                                            <li>
+                                                <span>Promo Discount</span>
+                                                <span class="value">- $0.00</span>
+                                            </li>
+                                            <li class="total">
+                                                <span>Total</span>
+                                                <span class="value">$147.00</span>
+                                            </li>
+                                        </ul>
+                                    </ul>
+                                </div>
+
+                                <div class="button">
+                                    <a href="#0" class="secondary__btn">Checkout</a>
+                                    <a href="#0" class="grey__link">View Cart</a>
+                                </div>
                             </div>
                         </div>
                     </div>
