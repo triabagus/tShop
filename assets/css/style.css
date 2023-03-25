@@ -1921,6 +1921,10 @@ form .button button,
         scroll-snap-type: unset;
         overscroll-behavior-inline: unset;
     }
+    .scrollto .wrapper :is(.product__list){
+        overflow: auto;
+        max-height: 200px;
+    }
     .scrollto .wrapper .item{
         width: unset;
     }
@@ -1970,5 +1974,17 @@ form .button button,
     }
     .product.dotgrid .image{
         overflow: unset;
+    }
+}
+
+@media (max-width: 320px){
+    .product__list li{
+        display: grid;
+    }
+    .product__list .variants{
+        padding: 1rem 0;
+    }
+    .product__list .item__remove{
+        top: 1rem;
     }
 }
