@@ -1775,6 +1775,38 @@ form .button button,
     max-height: 400px;
 }
 
+/* ------------- *
+    #Category Page
+* -------------- */
+.sidebar__title{
+    font-size: 26px;
+}
+.sidebar .widget{
+    margin: 20px 0;
+}
+.sidebar label{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.sidebar label span{
+    font-weight: 600;
+}
+.sidebar label i{
+    font-size: 26px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sidebar .list__block ul{
+    padding-left: 15px;
+    margin-top: 20px;
+    height: 230px;
+}
+
+
 @media (min-width: 481px){
     .product .wrapper{
         --gutter: 60px;  
@@ -1924,6 +1956,9 @@ form .button button,
     .scrollto .wrapper :is(.product__list){
         overflow: auto;
         max-height: 200px;
+    }
+    .scrollto .wrapper:is(.initial){
+        overflow: auto;
     }
     .scrollto .wrapper .item{
         width: unset;
