@@ -471,7 +471,8 @@ form :where(input, textarea, select)::placeholder{
     color: var(--light-color);   
 }
 
-.header__left .list__inline{
+.header__left .list__inline,
+.sidebar .widget input[type="checkbox"]{
     display: none;
 }
 
@@ -1778,13 +1779,17 @@ form .button button,
 /* ------------- *
     #Category Page
 * -------------- */
+    /* ------------- *
+        #Sidebar
+    * -------------- */
 .sidebar__title{
     font-size: 26px;
 }
 .sidebar .widget{
     margin: 20px 0;
 }
-.sidebar label{
+.sidebar label,
+.sidebar .price__range{
     display: flex;
     justify-content: space-between;
     cursor: pointer;
@@ -1799,6 +1804,7 @@ form .button button,
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: var(--transition-transform);
 }
 .sidebar .list__block ul{
     padding-left: 15px;
@@ -1806,6 +1812,58 @@ form .button button,
     height: 230px;
 }
 
+input[type="range"]{
+    -webkit-appearance: none;
+    width: 100%;
+}
+input[type="range"]:focus{
+    outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track{
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: var(--light-color);
+    box-shadow: none;
+    border: 0;
+}
+input[type="range"]::-webkit-slider-thumb{
+    z-index: 2;
+    position: relative;
+    height: 18px;
+    width: 14px;
+    background: var(--grey-color);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -7px;
+}
+
+.sidebar .price__range{
+    font-size: 18px;
+}
+.sidebar .widget .accord{
+    padding-right: 15px;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: all .3s ease;
+}
+.sidebar .widget input:checked ~ div{
+    max-height: 1000px;
+    opacity: 1;
+    visibility: visible;
+}
+.sidebar .widget input:checked ~ label i{
+    transform: rotate(180deg);
+}
+.sidebar .widget :where(.accord > div, .range__track){
+    padding-top: 20px;
+}
+
+    /* ------------- *
+        #Product Category
+    * -------------- */
 
 @media (min-width: 481px){
     .product .wrapper{
