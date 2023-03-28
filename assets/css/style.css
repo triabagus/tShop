@@ -284,7 +284,8 @@ nav.menu .sub__menu li{
 .overlay,
 .mobile__menu,
 .data__popup,
-.cart__menu{
+.cart__menu,
+.sidebar{
     position: fixed;
     top: 0;
     left: 0;
@@ -486,19 +487,22 @@ form :where(input, textarea, select)::placeholder{
     #HEADER: Mobile Menu, Cart Menu
 */
 .mobile__menu,
-.cart__menu{
+.cart__menu,
+.sidebar{
     z-index: 1001;
     pointer-events: none;
     visibility: hidden;
     opacity: 0;
 }
 .mobile__menu.active,
-.cart__menu.active{
+.cart__menu.active,
+.sidebar.active{
     visibility: visible;
     opacity: 1;
 }
 .mobile__menu .wrap,
-.cart__menu .wrap{
+.cart__menu .wrap,
+.sidebar > .wrap{
     position: relative;
     max-width: calc(100% - 40px);
     width: 360px;
@@ -509,12 +513,14 @@ form :where(input, textarea, select)::placeholder{
     transition: var(--transition-transform);
 }
 .mobile__menu.active .wrap,
-.cart__menu.active .wrap{
+.cart__menu.active .wrap,
+.sidebar.active .wrap{
     transition: translateX(0);
 } 
 .mobile__menu .close__trigger,
 .mobile__menu .child__trigger,
-.cart__menu .close__trigger{
+.cart__menu .close__trigger,
+.sidebar .close__trigger{
     position: absolute;
     top: 0;
     right: -40px;
@@ -526,7 +532,8 @@ form :where(input, textarea, select)::placeholder{
     justify-content: center;
 }
 .mobile__menu .main__menu,
-.cart__menu .cart__list{
+.cart__menu .cart__list,
+.sidebar__content{
     height: 100%;
     padding: 0 20px;
     display: flex;
@@ -1784,6 +1791,7 @@ form .button button,
     * -------------- */
 .sidebar__title{
     font-size: 26px;
+    padding-top: 50px;
 }
 .sidebar .widget{
     margin: 20px 0;
@@ -1864,6 +1872,59 @@ input[type="range"]::-webkit-slider-thumb{
     /* ------------- *
         #Product Category
     * -------------- */
+.category__content .button{
+    margin: 60px 0 100px;
+    text-align: center;
+}
+.category__content :where(.sorter, .right){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.category__content .sorter > a{
+    display: flex;
+    align-items: center;
+    height: 44px;
+    width: 44px;
+    background: var(--dark-color);
+    color: var(--white-color);
+    border-radius: 50%;
+    position: fixed;
+    top: calc(50% - 20px);
+    left: 0;
+    z-index: 10;
+    opacity: .5;
+    transition: opacity .3s, var(--transition-transform);
+}
+.category__content .sorter > a:hover{
+    transform: scale(1.2);
+    opacity: 1;
+}
+.category__content .opt__trigger span{
+    font-size: 14px;
+    font-weight: 600;
+}
+.category__content .opt__trigger i{
+    font-size: 24px;
+}
+.category__content .sort__list ul{
+    width: 180px;
+}
+.category__content .list__inline a{
+    display: flex;
+    padding: 7px;
+    background: var(--flashwhite-color);
+    margin-left: 10px;
+    border-radius: 3px;
+}
+.category__content .left span{
+    display: none;
+}
+
+.category__content .dotgrid .wrapper{
+    --grid-col: 221px;
+}
 
 @media (min-width: 481px){
     .product .wrapper{
@@ -1965,10 +2026,17 @@ input[type="range"]::-webkit-slider-thumb{
     .product nav ul{
         justify-content: center;
     }
+
+    /* category */
+    .category__content .left span{
+        display: block;
+    }
 }
 
 @media (min-width: 992px){
-    .menu__trigger{
+    .menu__trigger,
+    .sidebar .close__trigger,
+    .category__content .sorter > a{
         display: none;
     }
 
@@ -2031,6 +2099,22 @@ input[type="range"]::-webkit-slider-thumb{
     /* Product description */
     .product.detail .scrollto .wrapper{
         display: flex;
+    }
+
+    /* Category */
+    .page__category .content{
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        gap: 60px;
+    }
+
+    .sidebar__title,
+    .sidebar__content{
+        padding: 0;    
+    }
+    .sidebar,
+    .sidebar > .wrap{
+        all: unset;
     }
 }
 

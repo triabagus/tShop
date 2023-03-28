@@ -266,7 +266,7 @@
                         <div class="content">
                             <div id="sidebar-filter" class="sidebar">
                                 <div class="wrap">
-                                    <a href="#0" class="close__trigger">
+                                    <a href="#0" class="close__trigger" trigger-close>
                                         <i class="ri-close-line"></i>
                                     </a>
                                     <div class="sidebar__content">
@@ -291,7 +291,7 @@
                                         </div>
                                         <div class="widget">
                                             <div class="summary">
-                                                <input type="checkbox" name="cats" id="aab" checked>
+                                                <input type="checkbox" name="cats" id="aab">
                                                 <label for="aab">
                                                     <span>Colors</span>
                                                     <i class="ri-arrow-down-s-line"></i>
@@ -307,7 +307,7 @@
                                         </div>
                                         <div class="widget">
                                             <div class="summary">
-                                                <input type="checkbox" name="cats" id="aac" checked>
+                                                <input type="checkbox" name="cats" id="aac">
                                                 <label for="aac">
                                                     <span>Categories</span>
                                                     <i class="ri-arrow-down-s-line"></i>
@@ -335,7 +335,7 @@
                                         </div>
                                         <div class="widget">
                                             <div class="summary">
-                                                <input type="checkbox" name="cats" id="aad" checked>
+                                                <input type="checkbox" name="cats" id="aad">
                                                 <label for="aad">
                                                     <span>Brands</span>
                                                     <i class="ri-arrow-down-s-line"></i>
@@ -372,7 +372,184 @@
                                 </div>
                             </div>
                             <div class="category__content">
+                                <div class="sorter">
+                                    <a href="#0" class="menu__trigger" trigger-button data-target="sidebar-filter"><i class="ri-filter-line"></i></a>
+                                    <div class="left"><span class="grey__color">Showing 9 of 35 results</span></div>
+                                    <div class="right">
+                                        <div class="sort__list">
+                                            <div class="wrap">
+                                                <div class="opt__trigger">
+                                                    <span class="value">Default Sorting</span>
+                                                    <i class="ri-arrow-down-s-line"></i>
+                                                </div>
+                                                <ul>
+                                                    <li class="active"><a href="#0">Default Sorting</a></li>
+                                                    <li><a href="#0">Popular</a></li>
+                                                    <li><a href="#0">Rating</a></li>
+                                                    <li><a href="#0">Latest</a></li>
+                                                    <li><a href="#0">Price: low to high</a></li>
+                                                    <li><a href="#0">Price: high to low</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
 
+                                        <div class="list__inline">
+                                            <ul>
+                                                <li><a href="#0"><span class="ri-pause-mini-line"></span></a></li>
+                                                <li><a href="#0"><span class="ri-list-check-2"></span></a></li>
+                                                <li><a href="#0"><span class="ri-layout-grid-line"></span></a></li>
+                                                <li><a href="#0"><span class="ri-layout-masonry-line"></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dotgrid">
+                                    <!-- copy from tabbed product at homepage -->
+                                    <div class="wrapper">
+                                        <!-- Copy .item from carousel -->
+                                        <div class="item">
+                                            <div class="dot__image">
+                                                <a href="#" class="product-permalink"></a>
+                                                
+                                                <div class="thumbnail">
+                                                    <img src="assets/img/product_01.jpg" alt="product o1 image">
+                                                </div>
+                                                <div class="thumbnail hover">
+                                                    <img src="assets/img/product_01b.jpg" alt="product o1b image">
+                                                </div>
+                                                <div class="actions">
+                                                    <ul>
+                                                        <li><a href="#"><i class="ri-star-line"></i></a></li>
+                                                        <li><a href="#"><i class="ri-arrow-left-right-line"></i></a></li>
+                                                        <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="label"><span>-25%</span></div>
+                                            </div>
+
+                                            <div class="dot__info">
+                                                <h2 class="dot__title"><a href="#">The Sweet in Tosca</a></h2>
+                                                <div class="product__price">
+                                                    <span class="before">$62.00</span>
+                                                    <span class="current">$45.00</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="dot__image">
+                                                <a href="#" class="product-permalink"></a>
+                                                
+                                                <div class="thumbnail">
+                                                    <img src="assets/img/product_01.jpg" alt="product o1 image">
+                                                </div>
+                                                <div class="thumbnail hover">
+                                                    <img src="assets/img/product_01b.jpg" alt="product o1b image">
+                                                </div>
+                                                <div class="actions">
+                                                    <ul>
+                                                        <li><a href="#"><i class="ri-star-line"></i></a></li>
+                                                        <li><a href="#"><i class="ri-arrow-left-right-line"></i></a></li>
+                                                        <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="label"><span>-25%</span></div>
+                                            </div>
+
+                                            <div class="dot__info">
+                                                <h2 class="dot__title"><a href="#">The Sweet in Tosca</a></h2>
+                                                <div class="product__price">
+                                                    <span class="before">$62.00</span>
+                                                    <span class="current">$45.00</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="dot__image">
+                                                <a href="#" class="product-permalink"></a>
+                                                
+                                                <div class="thumbnail">
+                                                    <img src="assets/img/product_01.jpg" alt="product o1 image">
+                                                </div>
+                                                <div class="thumbnail hover">
+                                                    <img src="assets/img/product_01b.jpg" alt="product o1b image">
+                                                </div>
+                                                <div class="actions">
+                                                    <ul>
+                                                        <li><a href="#"><i class="ri-star-line"></i></a></li>
+                                                        <li><a href="#"><i class="ri-arrow-left-right-line"></i></a></li>
+                                                        <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="label"><span>-25%</span></div>
+                                            </div>
+
+                                            <div class="dot__info">
+                                                <h2 class="dot__title"><a href="#">The Sweet in Tosca</a></h2>
+                                                <div class="product__price">
+                                                    <span class="before">$62.00</span>
+                                                    <span class="current">$45.00</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="dot__image">
+                                                <a href="#" class="product-permalink"></a>
+                                                
+                                                <div class="thumbnail">
+                                                    <img src="assets/img/product_01.jpg" alt="product o1 image">
+                                                </div>
+                                                <div class="thumbnail hover">
+                                                    <img src="assets/img/product_01b.jpg" alt="product o1b image">
+                                                </div>
+                                                <div class="actions">
+                                                    <ul>
+                                                        <li><a href="#"><i class="ri-star-line"></i></a></li>
+                                                        <li><a href="#"><i class="ri-arrow-left-right-line"></i></a></li>
+                                                        <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="label"><span>-25%</span></div>
+                                            </div>
+
+                                            <div class="dot__info">
+                                                <h2 class="dot__title"><a href="#">The Sweet in Tosca</a></h2>
+                                                <div class="product__price">
+                                                    <span class="before">$62.00</span>
+                                                    <span class="current">$45.00</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="dot__image">
+                                                <a href="#" class="product-permalink"></a>
+                                                
+                                                <div class="thumbnail">
+                                                    <img src="assets/img/product_01.jpg" alt="product o1 image">
+                                                </div>
+                                                <div class="thumbnail hover">
+                                                    <img src="assets/img/product_01b.jpg" alt="product o1b image">
+                                                </div>
+                                                <div class="actions">
+                                                    <ul>
+                                                        <li><a href="#"><i class="ri-star-line"></i></a></li>
+                                                        <li><a href="#"><i class="ri-arrow-left-right-line"></i></a></li>
+                                                        <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="label"><span>-25%</span></div>
+                                            </div>
+
+                                            <div class="dot__info">
+                                                <h2 class="dot__title"><a href="#">The Sweet in Tosca</a></h2>
+                                                <div class="product__price">
+                                                    <span class="before">$62.00</span>
+                                                    <span class="current">$45.00</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="button"><a href="#0" class="primary__btn">Load More</a></div>
                             </div>
                         </div>
                     </div>
