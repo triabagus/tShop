@@ -330,82 +330,6 @@ nav.menu .sub__menu li{
     background: var(--grey-color);
 }
 
-/* 
-    #HEADER: Search
-*/
-.inner__header .search__float{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: auto;
-    height: 80px;
-    background: var(--white-color);
-    z-index: 1000;
-    display: none;
-}
-form.search{
-    position: relative;
-}
-form.search :where(i, .submit) {
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-form.search .input{
-    outline: 0;
-    padding: 15px 50px;
-}
-form.search i{
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 100%;
-    cursor: pointer;
-}
-form.search :where(.submit, i:last-child){
-    left: auto;
-    right: 0;
-}
-form.search .submit{
-    border: 0;
-    background: transparent;
-    color: transparent;
-    width: 50px;
-    height: 100%;
-    right: 0;
-    z-index: 1;
-    cursor: pointer;
-}
-form :where(input, textarea, select){
-    font-size: 14px;
-    border: 1px solid var(--light-color);
-    outline: 0;
-    background: transparent;
-    padding: 10px 20px;
-    transition: border .3s;
-}
-form :where(input, textarea, select):focus{
-    border-color: var(--dark-color);
-}
-form :where(input, textarea, select)::placeholder{
-    color: var(--grey-color);
-}
-
-
-.inner__header .search .input{
-    display: flex;
-    border: 0;
-    height: 80px;
-    fonr-size: 18px;
-} 
-
-.search__float.active{
-    display: block;
-}
-
 /* ------------- *
     #HEADER
 * -------------- */
@@ -482,10 +406,84 @@ form :where(input, textarea, select)::placeholder{
     align-items: center;
     height: 80px;
 }
+    /* 
+        #HEADER: Search
+    */
+.inner__header .search__float{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    height: 80px;
+    background: var(--white-color);
+    z-index: 1000;
+    display: none;
+}
+form.search{
+    position: relative;
+}
+form.search :where(i, .submit) {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+form.search .input{
+    outline: 0;
+    padding: 15px 50px;
+}
+form.search i{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 100%;
+    cursor: pointer;
+}
+form.search :where(.submit, i:last-child){
+    left: auto;
+    right: 0;
+}
+form.search .submit{
+    border: 0;
+    background: transparent;
+    color: transparent;
+    width: 50px;
+    height: 100%;
+    right: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+form :where(input, textarea, select){
+    font-size: 14px;
+    border: 1px solid var(--light-color);
+    outline: 0;
+    background: transparent;
+    padding: 10px 20px;
+    transition: border .3s;
+}
+form :where(input, textarea, select):focus{
+    border-color: var(--dark-color);
+}
+form :where(input, textarea, select)::placeholder{
+    color: var(--grey-color);
+}
 
-/* 
-    #HEADER: Mobile Menu, Cart Menu
-*/
+.inner__header .search .input{
+    display: flex;
+    border: 0;
+    height: 80px;
+    fonr-size: 18px;
+} 
+
+.search__float.active{
+    display: block;
+}
+
+    /* 
+        #HEADER: Mobile Menu, Cart Menu
+    */
 .mobile__menu,
 .cart__menu,
 .sidebar{
@@ -588,9 +586,9 @@ form :where(input, textarea, select)::placeholder{
     margin-top: 10px;
 }
 
-/* 
-    #Header: Product
-*/
+    /* 
+        #Header: Product
+    */
 .dotgrid .wrapper{
     display: var(--display, grid);
     --grid-col: 175px;
@@ -675,9 +673,9 @@ form :where(input, textarea, select)::placeholder{
     text-align: center;
 }
 
-/* 
-    #Sub menu & Mega 
-*/
+    /* 
+        #Header: Sub menu & Mega 
+    */
 .mega__content{
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -714,9 +712,9 @@ nav.menu .sub__menu li{
     padding: 5px 30px;
 }
 
-/* 
+/* ------------- *
     #SLIDER
-*/
+* -------------- */
 .slider :where(.image, .ob__cover){
     position: relative;
 }
@@ -812,9 +810,9 @@ nav.menu .sub__menu li{
     transition-delay: .75s;
 }
 
-/* 
-    #Guide
-*/
+/* ------------- *
+    #GUIDE
+* -------------- */
 .page__home main > div:not(.slider, .frominsta),
 .inner__footer{
     padding: 100px 0;
@@ -856,9 +854,9 @@ main .heading{
     border-color: #f0f9f8;
 }
 
-/* 
-    #Carousel
-*/
+/* ------------- *
+    #CAROUSEL
+* -------------- */
 .carousel .inner__wrapper{
     position: relative;
 }
@@ -895,7 +893,6 @@ main .heading{
 /* ------------- *
     #ByCats
 * -------------- */
-
 .bycats .heading{
     display: flex;
     justify-content: center;
@@ -954,7 +951,7 @@ main .heading{
 }
 
 /* ------------- *
-    #Banner
+    #BANNER
 * -------------- */
 .banner{
     background-color: var(--light-color);
@@ -1372,7 +1369,7 @@ main .heading{
 }
 
     /* 
-        #Product Description / tabbed
+        #Product Description / Tabbed
     */
 .product.detail{
     padding-top: 30px;
@@ -1513,9 +1510,9 @@ main .heading{
     padding-bottom: 40px;
 }
 
-    /* 
-        #Popup Modal
-    */
+/* ------------- *
+    #POPUP MODAL
+* -------------- */
 .data__popup{
     z-index: 1001;
     pointer-events: none;
@@ -1607,9 +1604,9 @@ form .button button,
     flex-direction: row-reverse;
 }
 
-    /* 
-        #Floating Cart
-    */
+/* ------------- *
+    #FLOATING CART
+* -------------- */
 .cart__menu .wrap{
     float: right;
     --transX: 100%;
@@ -1786,9 +1783,9 @@ form .button button,
 /* ------------- *
     #Category Page
 * -------------- */
-    /* ------------- *
+    /* 
         #Sidebar
-    * -------------- */
+    */
 .sidebar__title{
     font-size: 26px;
     padding-top: 50px;
@@ -1869,9 +1866,9 @@ input[type="range"]::-webkit-slider-thumb{
     padding-top: 20px;
 }
 
-    /* ------------- *
+    /* 
         #Product Category
-    * -------------- */
+    */
 .category__content .button{
     margin: 60px 0 100px;
     text-align: center;
@@ -1926,40 +1923,12 @@ input[type="range"]::-webkit-slider-thumb{
     --grid-col: 221px;
 }
 
-@media (min-width: 481px){
-    .product .wrapper{
-        --gutter: 60px;  
-    }
-    .product.dotgrid .image{
-        position: relative;
-        max-width: 500px;
-        width: 100%;
-        margin: 0 auto;
-        height: min-content;
-        overflow: hidden;
-    }
-    .product .outer__main{
-        width: calc(100% - 85px);
-        height: 100%;
-        margin: 0 0 0 85px;
-    }
-    .product .outer__thumb{
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-    .custom__pagination{
-        display: none;
-    }
-    .product .profile .comment{
-        padding-left: 92px;
-    }
-}
-
 /* ------------- *
     #Responsive
 * -------------- */
+    /* 
+        #Responsive: max-width
+    */
 
 @media (max-width: 768px){
     .product nav:before{
@@ -1998,9 +1967,56 @@ input[type="range"]::-webkit-slider-thumb{
     }
 }
 
+@media (max-width: 320px){
+    .product__list li{
+        display: grid;
+    }
+    .product__list .variants{
+        padding: 1rem 0;
+    }
+    .product__list .item__remove{
+        top: 1rem;
+    }
+}
+
+    /* 
+        #Responsive: min-width
+    */
+
 @media (min-width: 480px){
     .carousel .dotgrid .item{
         width: 270px;
+    }
+}
+
+@media (min-width: 481px){
+    .product .wrapper{
+        --gutter: 60px;  
+    }
+    .product.dotgrid .image{
+        position: relative;
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+        height: min-content;
+        overflow: hidden;
+    }
+    .product .outer__main{
+        width: calc(100% - 85px);
+        height: 100%;
+        margin: 0 0 0 85px;
+    }
+    .product .outer__thumb{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .custom__pagination{
+        display: none;
+    }
+    .product .profile .comment{
+        padding-left: 92px;
     }
 }
 
@@ -2151,17 +2167,5 @@ input[type="range"]::-webkit-slider-thumb{
     }
     .product.dotgrid .image{
         overflow: unset;
-    }
-}
-
-@media (max-width: 320px){
-    .product__list li{
-        display: grid;
-    }
-    .product__list .variants{
-        padding: 1rem 0;
-    }
-    .product__list .item__remove{
-        top: 1rem;
     }
 }
