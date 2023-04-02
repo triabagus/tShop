@@ -1933,7 +1933,8 @@ input[type="range"]::-webkit-slider-thumb{
     position: relative;
 }
 .page__cart .product__list li,
-.page__cart .cart__total .grouping{
+.page__cart .cart__total .grouping,
+.page__checkout .content{
     display: grid;
     margin: 0;
 }
@@ -1971,7 +1972,8 @@ input[type="range"]::-webkit-slider-thumb{
     text-align: center;
     --gutter: 0;
 }
-.cart__table .product__list .thumbnail{
+.cart__table .product__list .thumbnail,
+.checkout__products .product__list .thumbnail{
     position: relative;
     width: 120px;
     height: 120px;
@@ -2061,6 +2063,65 @@ input[type="range"]::-webkit-slider-thumb{
     text-transform: capitalize;
 }
 
+/* ------------- *
+    #CHECKOUT PAGE
+* -------------- */
+.page__checkout h2{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.page__checkout .checkbox__address{
+    padding-bottom: 40px;
+}
+.page__checkout form > div,
+.page__checkout form > div input ~ input{
+    margin-top: 20px;
+}
+.page__checkout form > div label{
+    display: inline-block;
+    margin: 0 0 5px;
+}
+
+.checkout__products{
+    position: relative;
+    margin: 0 -15px;
+    padding: 40px 15px 0;
+}
+.checkout__products .product__list li{
+    min-height: 120px;
+}
+.checkbox__products .product__list .grouping{
+    padding: 0;
+    margin-right: 20px;
+}
+.checkout__products .item__floating{
+    top: -11px;
+    right: -7px;
+    transform: scale(1.5);
+    z-index: 1;
+}
+.checkout__products.has__bg::before,
+.checkout__products.has__bg::after{
+    /* background: var(--flashwhite-color); */
+}
+.checkout__products.has__bg::before{
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+.checkout__products.has__bg::after{
+    top: 0;
+    left: 100%;
+    width: 100%;
+}
+.checkout__products > div .wrapper{
+    max-width: 400px;
+    line-height: 34px;
+    margin: 0 auto;
+} 
+
+ 
 /* ------------- *
     #Responsive
 * -------------- */
@@ -2193,7 +2254,8 @@ input[type="range"]::-webkit-slider-thumb{
 
     /* Cart */
     .page__cart .product__list li,
-    .page__cart .cart__total .grouping{
+    .page__cart .cart__total .grouping,
+    .page__checkout .content{
         grid-template-columns: 1fr 1fr;
     }
 
@@ -2209,6 +2271,21 @@ input[type="range"]::-webkit-slider-thumb{
 
     .cart__total .sub__total{
         padding-left: 10%;
+        margin: 0;
+    }
+
+    /* checkout */
+    .checkout__products{
+        margin: 0;
+        padding: 0;
+    }
+    .checkbox__address{
+        padding-right: 10%;
+    }
+    .checkbox__products .order__summary{
+        padding: 10% 0 0 10%;
+    }
+    .checkout__products > div .wrapper{
         margin: 0;
     }
 }
