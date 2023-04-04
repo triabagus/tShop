@@ -398,7 +398,7 @@ nav.menu .sub__menu li{
 
 .header__left .list__inline,
 .sidebar .widget input[type="checkbox"],
-.checkbox__products .payment__options input{
+.checkout__products .payment__options input{
     display: none;
 }
 
@@ -2091,7 +2091,7 @@ input[type="range"]::-webkit-slider-thumb{
 .checkout__products .product__list li{
     min-height: 120px;
 }
-.checkbox__products .product__list .grouping{
+.checkout__products .product__list .grouping{
     padding: 0;
     margin-right: 20px;
 }
@@ -2131,20 +2131,20 @@ input[type="range"]::-webkit-slider-thumb{
     z-index: 0;
 }
 
-.checkbox__products .payment__options{
+.checkout__products .payment__options{
     text-align: center;
     margin-bottom: 30px;
 }
-.checkbox__products .payment__options > span{
+.checkout__products .payment__options > span{
     color: var(--light-color);
     display: inline-block;
     margin-bottom: 15px;
 }
-.checkbox__products .payment__options ul{
+.checkout__products .payment__options ul{
     justify-content: center;
     gap: 20px; 
 }
-.checkbox__products .payment__options ul li label{
+.checkout__products .payment__options ul li label{
     font-size: 30px;
     color: var(--grey-color);
     width: 60px;
@@ -2161,7 +2161,26 @@ input[type="range"]::-webkit-slider-thumb{
     background-color: #ff47571a;
     color: var(--red-color);
 }
-
+.checkout__products .discount form .input{
+    background: #6870804d;
+}
+.checkout__products .discount form .submit{
+    background: var(--grey-color);
+    border: 0;
+    transition: var(--transition-background);
+    border-radius: 5px;
+}
+.checkout__products .discount form .submit:hover{
+    background: var(--dark-color);
+}
+.checkout__products .discount form .input,
+.checkout__products .discount form .input::placeholder,
+.checkout__products .cart__footer .math__pricing li span:not(.value){
+    color: var(--light-color);
+}
+.checkout__products .total__summary ul li.total{
+    border-color: var(--grey-color);
+}
  
 /* ------------- *
     #Responsive
@@ -2204,6 +2223,15 @@ input[type="range"]::-webkit-slider-thumb{
     }
     .product.detail .dotgrid .wrapper{
         flex-direction: column;
+    }
+
+    /* Checkout */
+    .page__checkout .product__list li .grouping{
+        padding: 0;
+    }
+    .page__checkout .product__list .variants{
+        gap: 4px;
+        margin-left: 10rem;
     }
 }
 
@@ -2323,7 +2351,7 @@ input[type="range"]::-webkit-slider-thumb{
     .checkbox__address{
         padding-right: 10%;
     }
-    .checkbox__products .order__summary{
+    .checkout__products .order__summary{
         padding: 10% 0 0 10%;
     }
     .checkout__products > div .wrapper,
